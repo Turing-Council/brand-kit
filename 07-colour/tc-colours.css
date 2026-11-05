@@ -1,0 +1,37 @@
+:root{
+  --tc-navy:#030F4F;
+  --tc-navy-900:#02092F;
+  --tc-navy-700:#17225D;
+  --tc-navy-500:#2E386D;
+  --tc-navy-300:#8187A7;
+  --tc-navy-100:#DCDDE6;
+  --tc-white:#FFFFFF;
+  --tc-paper:#F4F4F8;
+  --tc-lilac:#C3C6EC;
+  --tc-hcai:#FC7634;
+  --tc-hcai-0:#17225D;
+  --tc-hcai-1:#533046;
+  --tc-hcai-2:#8C4840;
+  --tc-hcai-3:#C55F3A;
+  --tc-hcai-4:#FC7634;
+  --tc-mmc:#79238E;
+  --tc-mmc-0:#17225D;
+  --tc-mmc-1:#291563;
+  --tc-mmc-2:#441A72;
+  --tc-mmc-3:#5F1F80;
+  --tc-mmc-4:#79238E;
+  --tc-as:#1FD082;
+  --tc-as-0:#17225D;
+  --tc-as-1:#0C4D5F;
+  --tc-as-2:#12796B;
+  --tc-as-3:#19A677;
+  --tc-as-4:#1FD082;
+  --tc-cse:#2F3EEA;
+  --tc-cse-0:#17225D;
+  --tc-cse-1:#111E81;
+  --tc-cse-2:#1B29A4;
+  --tc-cse-3:#2534C8;
+  --tc-cse-4:#2F3EEA;
+  --tc-font:"Poppins",system-ui,sans-serif;
+  --tc-mono:"JetBrains Mono",ui-monospace,monospace;
+}

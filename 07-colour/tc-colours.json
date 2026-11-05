@@ -1,0 +1,64 @@
+{
+  "source": "DTU navy and study-line colours: https://designguide.dtu.dk/colours. Tints, levels, lilac and paper are Turing Council additions.",
+  "base": {
+    "navy": "#030F4F",
+    "navy-900": "#02092F",
+    "navy-700": "#17225D",
+    "navy-500": "#2E386D",
+    "navy-300": "#8187A7",
+    "navy-100": "#DCDDE6",
+    "white": "#FFFFFF",
+    "paper": "#F4F4F8",
+    "lilac": "#C3C6EC"
+  },
+  "study_lines": {
+    "hcai": {
+      "name": "Human-Centered AI",
+      "dtu_colour": "DTU Orange",
+      "hex": "#FC7634",
+      "levels": [
+        "#17225D",
+        "#533046",
+        "#8C4840",
+        "#C55F3A",
+        "#FC7634"
+      ]
+    },
+    "mmc": {
+      "name": "Mathematical Modelling and Computation",
+      "dtu_colour": "DTU Purple",
+      "hex": "#79238E",
+      "levels": [
+        "#17225D",
+        "#291563",
+        "#441A72",
+        "#5F1F80",
+        "#79238E"
+      ]
+    },
+    "as": {
+      "name": "Autonomous Systems",
+      "dtu_colour": "DTU Bright green",
+      "hex": "#1FD082",
+      "levels": [
+        "#17225D",
+        "#0C4D5F",
+        "#12796B",
+        "#19A677",
+        "#1FD082"
+      ]
+    },
+    "cse": {
+      "name": "Computer Science and Engineering",
+      "dtu_colour": "DTU Blue",
+      "hex": "#2F3EEA",
+      "levels": [
+        "#17225D",
+        "#111E81",
+        "#1B29A4",
+        "#2534C8",
+        "#2F3EEA"
+      ]
+    }
+  }
+}

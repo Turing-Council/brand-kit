@@ -1,0 +1,451 @@
+<title>Turing Council Brand Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: the brand book. Navy cover, then eight chapters on paper, each opening with a numbered navy band. The book uses the brand's own tokens. */
+:root{
+  --navy:#030F4F; --navy-900:#02092F; --navy-700:#17225D; --navy-500:#2E386D; --navy-300:#8187A7; --navy-100:#DCDDE6;
+  --paper:#F4F4F8; --white:#FFFFFF; --lilac:#C3C6EC;
+  --hcai:#FC7634; --mmc:#79238E; --as:#1FD082; --cse:#2F3EEA;
+  --bg:var(--paper); --surface:#FFFFFF; --fg:var(--navy); --muted:#4D5285; --line:#DCDDEA;
+  --font:"Poppins",Arial,system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#070A2C;--surface:#0E1446;--fg:#EEF0FF;--muted:#A6AAD6;--line:#232A66;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#070A2C;--surface:#0E1446;--fg:#EEF0FF;--muted:#A6AAD6;--line:#232A66;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15.5px;line-height:1.62;margin:0;padding-block:0 72px}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;display:grid;gap:88px}
+p{margin:0}
+.lead{color:var(--muted);max-width:64ch;font-size:16.5px}
+.label{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{margin:0;font-weight:700;font-size:clamp(28px,4vw,44px);letter-spacing:-.03em;line-height:1.05;text-wrap:balance}
+h3{margin:0;font-weight:600;font-size:19px;letter-spacing:-.015em;line-height:1.25}
+h4{margin:0;font-weight:600;font-size:15px}
+code{font-family:var(--mono);font-size:.86em}
+
+/* cover */
+.cover{background:var(--navy);color:#fff;padding:clamp(40px,8vw,110px) 20px clamp(36px,6vw,80px);position:relative;overflow:hidden}
+.cover .in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center}
+.cover h1{margin:0;font-weight:700;font-size:clamp(44px,8vw,96px);line-height:.95;letter-spacing:-.04em}
+.cover p{color:var(--lilac);font-size:18px;margin-top:20px;max-width:40ch}
+.cover .meta{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9DA2DA;margin-bottom:22px}
+.cover .mk{width:clamp(140px,22vw,260px)}
+.cover .grid{margin-top:clamp(36px,6vw,70px);max-width:1120px;margin-inline:auto}
+@media (max-width:700px){.cover .in{grid-template-columns:1fr}.cover .mk{order:-1;width:120px}}
+
+/* contents */
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.toc a{background:var(--surface);padding:16px 18px;color:inherit;text-decoration:none;display:grid;gap:2px}
+.toc a:hover{background:var(--bg)}
+.toc a:focus-visible{outline:3px solid var(--cse);outline-offset:-3px}
+.toc span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.toc b{font-weight:600}
+
+/* chapter */
+.chapter{display:grid;gap:36px;scroll-margin-top:20px}
+.opener{background:var(--navy);color:#fff;border-radius:22px;padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:auto 1fr;gap:20px 34px;align-items:end;overflow:hidden;position:relative}
+.opener .n{font-family:var(--mono);font-weight:600;font-size:clamp(44px,7vw,84px);line-height:.8;color:var(--lilac);letter-spacing:-.04em}
+.opener h2{color:#fff}
+.opener p{color:var(--lilac);margin-top:10px;max-width:60ch}
+@media (max-width:640px){.opener{grid-template-columns:1fr}}
+.block{display:grid;gap:16px}
+.cols2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px}
+.cols3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.cols4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.card p,.card li{color:var(--muted);font-size:14.5px}
+.card ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.tile{border-radius:16px;overflow:hidden;display:grid;place-items:center;position:relative;min-width:0}
+.tile.navy{background:var(--navy)}.tile.white{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}.tile.black{background:#000}
+.cap{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.cap b{color:var(--fg);font-weight:600}
+figure{margin:0;display:grid;gap:10px;align-content:start;min-width:0}
+.quote{font-weight:700;font-size:clamp(26px,4vw,40px);letter-spacing:-.03em;line-height:1.1}
+.say{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;font-size:14.5px}
+.say .y{color:#0B7A4B;font-weight:600}.say .n2{color:#C0392B;font-weight:600}
+.ask{border:1.5px dashed var(--hcai);border-radius:14px;padding:14px 16px;font-size:14px;color:var(--muted)}
+.ask b{color:var(--fg)}
+
+/* colour */
+.swatch{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface);display:grid;grid-template-rows:auto 1fr}
+.swatch .c{height:140px;display:flex;align-items:end;padding:14px;font-weight:700;font-size:18px;letter-spacing:-.01em}
+.swatch .d{padding:12px 14px;display:grid;gap:2px;font-size:13px;color:var(--muted)}
+.swatch .d code{color:var(--fg)}
+.levels{display:grid;grid-template-columns:120px repeat(5,1fr);gap:6px;align-items:center;font-size:13px}
+.levels .cell{height:40px;border-radius:8px}
+.levels .h{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center}
+@media (max-width:560px){.levels{grid-template-columns:76px repeat(5,1fr)}}
+.ratio{display:flex;height:64px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.ratio div{display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.ok{color:#0B7A4B;font-weight:600}.no{color:#C0392B;font-weight:600}
+.dot{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;box-shadow:inset 0 0 0 1px rgba(127,127,160,.3)}
+
+/* logo */
+.mkbox{width:46%}
+.space{position:relative;background:var(--navy);border-radius:16px;display:grid;place-items:center;padding:40px}
+.space .zone{position:relative;outline:2px dashed var(--hcai);outline-offset:0}
+.space .zone .in{padding:var(--x);}
+.space .zone .in div{width:150px}
+.space .x{position:absolute;font-family:var(--mono);font-size:12px;color:var(--hcai);font-weight:600}
+.dont{position:relative}
+.dont::after{content:"";position:absolute;inset:0;background:linear-gradient(45deg,transparent calc(50% - 1.5px),#E5484D calc(50% - 1.5px) calc(50% + 1.5px),transparent calc(50% + 1.5px));pointer-events:none;opacity:.85}
+
+/* type */
+.spec{background:var(--navy);color:#fff;border-radius:16px;padding:26px;display:grid;gap:6px}
+.spec .big{font-size:clamp(46px,7vw,76px);line-height:1;letter-spacing:-.03em}
+.spec .alph{color:var(--lilac);font-size:15px;overflow-wrap:anywhere}
+.scale td:first-child{width:140px}
+.scale .s{color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
+
+/* photo */
+.ph{position:relative;overflow:hidden;border-radius:16px;aspect-ratio:4/3}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.duo{background:var(--c);isolation:isolate}
+.duo img{filter:grayscale(1) contrast(1.15) brightness(1.05);mix-blend-mode:multiply}
+.duo::after{content:"";position:absolute;inset:0;background:var(--navy);mix-blend-mode:lighten}
+.ph .t{position:absolute;left:14px;bottom:12px;z-index:2;color:#fff;font-weight:700;font-size:17px;letter-spacing:-.02em;line-height:1.1}
+.ph .t small{display:block;font-weight:500;font-size:11.5px;opacity:.85}
+.recipe{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px}
+.recipe i{width:120px;height:16px;border-radius:99px;display:block}
+
+/* pattern */
+.pat{background:var(--navy);border-radius:16px;padding:16px;display:grid;place-items:center}
+.pat img{width:100%}
+.anat{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+@media (max-width:640px){.anat{grid-template-columns:1fr}}
+
+/* kit */
+.tree{background:var(--navy);color:#E8EAFF;border-radius:16px;padding:22px;font-family:var(--mono);font-size:13px;line-height:1.75;white-space:pre;overflow-x:auto}
+.tree b{color:var(--as);font-weight:500}
+.tree i{color:var(--lilac);font-style:normal;opacity:.75}
+footer{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+</style>
+
+<header class="cover">
+  <div class="in">
+    <div><div class="meta">Brand book · version 1.0 · November 2026</div><h1>Turing Council</h1><p>The voice of DTU Compute. How our brand looks, sounds and is used.</p></div>
+    <div class="mk" data-mark="color"></div>
+  </div>
+  <div class="grid"><img src="assets/tc-bitgrid-bands-turing.svg" alt="Bit grid pattern with the word TURING hidden in the brightest cells"></div>
+</header>
+
+<div class="wrap" style="margin-top:56px">
+  <nav aria-label="Contents" class="block"><span class="label">Contents</span><div class="toc" id="toc"></div></nav>
+
+  <!-- 01 -->
+  <section class="chapter" id="foundation">
+    <div class="opener"><div class="n">01</div><div><h2>Brand foundation</h2><p>Who we are, what the cube means and how we talk.</p></div></div>
+    <div class="cols2">
+      <div class="block"><span class="label">Who we are</span>
+        <p class="lead">The Turing Council is the student council for master's students at DTU Compute. We represent the students in four study lines: Computer Science and Engineering, Human-Centered AI, Mathematical Modelling and Computation, and Autonomous Systems.</p>
+        <p class="lead">We speak for students at department and faculty meetings, connect them with industry and research groups, and run social and learning events like Career Night and Research and Thesis Night.</p></div>
+      <div class="block"><span class="label">Tagline</span><p class="quote">The voice of DTU Compute.</p>
+        <p class="lead">Used under the name in lockups, as the sign-off in posts and on covers. Always in this wording, always sentence case.</p></div>
+    </div>
+    <div class="cols2">
+      <div class="tile navy" style="padding:40px"><div style="width:52%" data-mark="color"></div></div>
+      <div class="block" style="align-content:center"><span class="label">The mark</span><h3>One cube, four study lines on top</h3>
+        <p class="lead">The cube is built from our initials: the T on its left face, the C on its right. On top sit four tiles, one for each study line, each in its own DTU colour. They're the same size and all lit at once: no study line comes first, and together they make the department.</p>
+        <p class="lead">The tiles are also bits: switched on, side by side. That idea carries into the bit grid pattern in chapter 06.</p></div>
+    </div>
+    <div class="block"><span class="label">Tone of voice</span>
+      <div class="cols4">
+        <div class="card"><h4>Clear</h4><p>Short sentences. Say what happens, when and where. No jargon from the department's meeting notes.</p></div>
+        <div class="card"><h4>Student to student</h4><p>We're fellow students, not an office. Write "we" and "you", use contractions.</p></div>
+        <div class="card"><h4>For all four lines</h4><p>Name the study lines by name. Don't let one line's slang or examples stand for everyone.</p></div>
+        <div class="card"><h4>A little nerdy</h4><p>A bit pun or a binary joke now and then is welcome. Never at the cost of being understood.</p></div>
+      </div>
+      <div class="card"><div class="say">
+        <span class="y">Say</span><span>Career Night is on Thursday. Come and meet companies hiring DTU Compute master's students.</span>
+        <span class="n2">Not</span><span>We are pleased to announce that the annual Career Night event will take place.</span>
+        <span class="y">Say</span><span>Something wrong in your course? Tell us, and we'll take it to the department.</span>
+        <span class="n2">Not</span><span>Students are encouraged to submit feedback through the appropriate channels.</span>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section class="chapter" id="colour">
+    <div class="opener"><div class="n">02</div><div><h2>Colour</h2><p>DTU Navy blue first. White for text. Four DTU secondary colours as study-line accents, each with five intensity levels.</p></div></div>
+    <div class="block"><span class="label">Base colours</span>
+      <div class="cols3">
+        <div class="swatch"><div class="c" style="background:#030F4F;color:#fff">DTU Navy blue</div><div class="d"><code>#030F4F</code><span>RGB 3 15 79 · CMYK 100 94 44 40 · Pantone 655 C</span><span>Main background. Most of every layout. DTU secondary colour.</span></div></div>
+        <div class="swatch"><div class="c" style="background:#fff;color:#030F4F;box-shadow:inset 0 -1px 0 var(--line)">White</div><div class="d"><code>#FFFFFF</code><span>RGB 255 255 255</span><span>Text and the letters of the cube. DTU primary colour.</span></div></div>
+        <div class="swatch"><div class="c" style="background:#C3C6EC;color:#030F4F">Lilac</div><div class="d"><code>#C3C6EC</code><span>RGB 195 198 236</span><span>Secondary text on navy: taglines, dates, captions. Our own addition, not a DTU colour.</span></div></div>
+      </div>
+      <div class="cols4" id="navyramp"></div>
+    </div>
+    <div class="block"><span class="label">Study-line colours</span>
+      <p class="lead">Four of the secondary colours in DTU's design guide. The study-line assignment is ours: DTU doesn't give departments or study lines their own colour. Each colour belongs to one study line. Use it for that line's events and content, and all four together only for things about the whole council.</p>
+      <div class="cols4" id="lines"></div>
+    </div>
+    <div class="block"><span class="label">Intensity levels</span>
+      <p class="lead">Like a contribution graph, every study-line colour has five steps from "empty" to "full". These steps are our own blends towards navy, not DTU's official tints (80, 70, 60 and 50 %). They're used in the bit grid and in charts. Level 0 is the same for all four lines.</p>
+      <div class="card"><div class="levels" id="levels"></div></div>
+    </div>
+    <div class="cols2">
+      <div class="block"><span class="label">Proportions</span>
+        <div class="ratio"><div style="flex:70;background:#030F4F;color:#fff">Navy 70%</div><div style="flex:20;background:#fff;color:#030F4F">White 20%</div><div style="flex:10;display:flex;align-items:stretch"><i style="flex:1;align-self:stretch;background:#FC7634"></i><i style="flex:1;align-self:stretch;background:#79238E"></i><i style="flex:1;align-self:stretch;background:#1FD082"></i><i style="flex:1;align-self:stretch;background:#2F3EEA"></i></div></div>
+        <p class="lead">Navy carries the layout, white carries the words, colour is the accent. If a piece looks like a rainbow, there is too much colour.</p></div>
+      <div class="block"><span class="label">Text contrast (WCAG)</span>
+        <div class="tbl"><table style="min-width:420px"><thead><tr><th>Colour</th><th>On navy</th><th>On white</th></tr></thead><tbody id="contrast"></tbody></table></div>
+        <p class="lead" style="font-size:14px">4.5:1 or more is fine for text. Blue and purple are for tiles and shapes on navy, never for text there. Orange and green never carry text on white.</p></div>
+    </div>
+    <div class="card"><h4>Source</h4><p>DTU Navy blue, White and the four study-line colours are DTU's official colours, from the DTU design guide: <b>designguide.dtu.dk/colours</b>. The page also lists CMYK and Pantone values for print. The navy scale, lilac, paper and the intensity levels are Turing Council additions.</p></div>
+  </section>
+
+  <!-- 03 -->
+  <section class="chapter" id="logo">
+    <div class="opener"><div class="n">03</div><div><h2>Logo</h2><p>The cube, its lockups with the name, and the one-colour version.</p></div></div>
+    <div class="cols3">
+      <figure><div class="tile navy" style="aspect-ratio:1"><div class="mkbox" data-mark="color"></div></div><div class="cap"><b>Primary</b><span>Full colour on navy</span></div></figure>
+      <figure><div class="tile white" style="aspect-ratio:1"><div style="width:52%" data-mark="tile"></div></div><div class="cap"><b>On light backgrounds</b><span>Always in its navy tile</span></div></figure>
+      <figure><div class="tile white" style="aspect-ratio:1;gap:18px;grid-auto-flow:column"><div style="width:34%" data-mark="tile"></div><div style="width:34%;border-radius:50%;overflow:hidden" data-mark="app"></div></div><div class="cap"><b>App icon and profile picture</b><span>Navy square, cropped by the platform</span></div></figure>
+    </div>
+    <div class="block"><span class="label">One colour</span>
+      <p class="lead">For stamps, laser engraving, foil, embroidery and one-colour print. Everything in a single ink; the gaps between tiles and letters carry the shape.</p>
+      <div class="cols3">
+        <figure><div class="tile black" style="aspect-ratio:4/3"><div style="width:30%" data-mark="mono-#FFFFFF"></div></div><div class="cap"><b>White</b><code>tc-logo-mono-white</code></div></figure>
+        <figure><div class="tile white" style="aspect-ratio:4/3"><div style="width:30%" data-mark="mono-#000000"></div></div><div class="cap"><b>Black</b><code>tc-logo-mono-black</code></div></figure>
+        <figure><div class="tile white" style="aspect-ratio:4/3"><div style="width:30%" data-mark="mono-#030F4F"></div></div><div class="cap"><b>Navy</b><code>tc-logo-mono-navy</code></div></figure>
+      </div>
+    </div>
+    <div class="block"><span class="label">Lockups</span>
+      <div class="cols2">
+        <figure><div class="tile navy" style="padding:36px"><img src="assets/tc-lockup-horizontal-tagline-dark.svg" alt="Horizontal lockup with tagline on navy" style="width:80%"></div><div class="cap"><b>Horizontal with tagline</b><span>Default</span></div></figure>
+        <figure><div class="tile white" style="padding:36px"><img src="assets/tc-lockup-horizontal-light.svg" alt="Horizontal lockup on white, with the cube in its navy tile" style="width:70%"></div><div class="cap"><b>Horizontal, light</b><span>Documents, email signature</span></div></figure>
+        <figure><div class="tile navy" style="padding:30px"><img src="assets/tc-lockup-stacked-tagline-dark.svg" alt="Stacked lockup with tagline on navy" style="width:46%"></div><div class="cap"><b>Stacked with tagline</b><span>Square spaces, posters, merch</span></div></figure>
+        <figure><div class="tile white" style="padding:36px"><img src="assets/tc-lockup-horizontal-mono-black.svg" alt="Horizontal lockup in black" style="width:70%"></div><div class="cap"><b>One colour</b><span>Same rules as the mark</span></div></figure>
+      </div>
+      <p class="lead" style="font-size:14.5px">Every lockup exists as dark (white text), light (navy text, cube in its tile), mono white and mono black. The name is set in Poppins Bold and converted to outlines in the files, so it looks the same everywhere.</p>
+    </div>
+    <div class="cols2">
+      <div class="block"><span class="label">Clear space</span>
+        <div class="space"><div class="zone" style="--x:34px"><span class="x" style="top:6px;left:50%;transform:translateX(-50%)">X</span><span class="x" style="left:8px;top:50%;transform:translateY(-50%)">X</span><div class="in"><div data-mark="color"></div></div></div></div>
+        <p class="lead" style="font-size:14.5px">X is the height of one top tile. Keep at least X empty on every side. The exported files already include it.</p></div>
+      <div class="block"><span class="label">Minimum size</span>
+        <div class="tbl"><table style="min-width:360px"><thead><tr><th>Version</th><th>Screen</th><th>Print</th></tr></thead><tbody>
+          <tr><td>Cube</td><td class="num">24 px tall</td><td class="num">10 mm tall</td></tr>
+          <tr><td>Horizontal lockup</td><td class="num">120 px wide</td><td class="num">30 mm wide</td></tr>
+          <tr><td>Lockup with tagline</td><td class="num">200 px wide</td><td class="num">45 mm wide</td></tr>
+          <tr><td>Favicon</td><td class="num">16 px</td><td class="num">–</td></tr>
+        </tbody></table></div>
+        <p class="lead" style="font-size:14.5px">Below these sizes the tiles merge. Drop the tagline first, then the name.</p></div>
+    </div>
+    <div class="block"><span class="label">Don't</span><div class="cols4" id="donts"></div></div>
+  </section>
+
+  <!-- 04 -->
+  <section class="chapter" id="type">
+    <div class="opener"><div class="n">04</div><div><h2>Typography</h2><p>Poppins for everything people read. JetBrains Mono for the small technical labels.</p></div></div>
+    <div class="cols2">
+      <div class="spec"><span class="label" style="color:#9DA2DA">Poppins · Bold, Medium, Regular</span><div class="big" style="font-weight:700">Aa Turing</div><div class="alph">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789</div></div>
+      <div class="spec"><span class="label" style="color:#9DA2DA">JetBrains Mono · Medium</span><div class="big" style="font-family:var(--mono);font-weight:500;font-size:clamp(40px,6vw,64px)">0110 1</div><div class="alph" style="font-family:var(--mono)">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>12 NOV · 18:00 · BUILDING 324</div></div>
+    </div>
+    <div class="tbl scale"><table><thead><tr><th>Style</th><th>Font</th><th>Size / line</th><th>Tracking</th><th>Sample</th></tr></thead><tbody id="scale"></tbody></table></div>
+    <div class="cols3">
+      <div class="card"><h4>Where to get them</h4><p>Both are free on Google Fonts: fonts.google.com/specimen/Poppins and fonts.google.com/specimen/JetBrains+Mono.</p></div>
+      <div class="card"><h4>Fallback</h4><p>If Poppins isn't available (Word on a shared PC, for example), use Arial. Never a script or decorative font.</p></div>
+      <div class="card"><h4>Rules</h4><ul><li>Sentence case for headlines and buttons</li><li>Mono only for labels, dates and numbers, always uppercase</li><li>Left-aligned text; centre only short lines on posters</li></ul></div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="chapter" id="imagery">
+    <div class="opener"><div class="n">05</div><div><h2>Imagery and photo style</h2><p>Duotone: navy shadows, study-line colour highlights. Any phone photo becomes ours.</p></div></div>
+    <div class="cols4" id="duos"></div>
+    <div class="cols2">
+      <div class="card"><h4>How to make one</h4>
+        <ul><li>Affinity: Layer → New Adjustment → Gradient Map. Set two stops: navy <code>#030F4F</code> on the left, the study-line colour on the right.</li>
+        <li>Photoshop: the same with a Gradient Map adjustment layer.</li>
+        <li>Phone: Canva's Duotone effect with the same two colours.</li>
+        <li>Raise contrast a little first. Flat photos give muddy duotones.</li></ul>
+        <div class="recipe"><i style="background:linear-gradient(90deg,#030F4F,#FC7634)"></i>navy → study-line colour</div>
+        <div class="recipe"><i style="background:linear-gradient(90deg,#030F4F,#C3C6EC)"></i>navy → lilac for council-wide content</div></div>
+      <div class="card"><h4>Rules</h4>
+        <ul><li>One colour per photo. Use the colour of the study line the content is about.</li>
+        <li>Content for the whole council uses navy to lilac.</li>
+        <li>Real people and real events. No stock photos.</li>
+        <li>Faces must stay recognisable. If they don't, pick another photo.</li>
+        <li>Text goes on the navy shadow areas or on a navy panel, never across faces.</li>
+        <li>Keep the untouched originals in the shared Drive, for press and for DTU.</li></ul></div>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section class="chapter" id="graphics">
+    <div class="opener"><div class="n">06</div><div><h2>Graphic elements</h2><p>The bit grid: rounded cells like a contribution graph, lit in the study-line colours.</p></div></div>
+    <div class="pat"><img src="assets/tc-bitgrid-bands.svg" alt="Bit grid in four study-line bands"></div>
+    <div class="anat">
+      <svg viewBox="0 0 260 150" width="260" role="img" aria-label="Anatomy of the bit grid: cell, gap and levels"><rect width="260" height="150" rx="14" fill="#030F4F"/>
+        <g id="anat"></g></svg>
+      <div class="block"><h3>How the grid is built</h3>
+        <p class="lead">Square cells with corners rounded to 20% of the cell. The gap is a quarter of the cell. Each cell shows one of the five intensity levels from chapter 02. Columns read left to right, like weeks on a contribution graph.</p></div>
+    </div>
+    <div class="block"><span class="label">Variants</span>
+      <div class="cols2">
+        <figure><div class="pat"><img src="assets/tc-bitgrid-bands.svg" alt="Four study-line bands"></div><div class="cap"><b>Four bands</b><span>Council-wide: the four lines side by side</span></div></figure>
+        <figure><div class="pat"><img src="assets/tc-bitgrid-bands-turing.svg" alt="Bands with TURING hidden in the brightest cells"></div><div class="cap"><b>Hidden word</b><span>TURING in level-4 cells. Covers and hero spots only</span></div></figure>
+        <figure><div class="pat"><img src="assets/tc-bitgrid-mixed.svg" alt="Mixed colours"></div><div class="cap"><b>Mixed</b><span>Backgrounds, merch prints</span></div></figure>
+        <figure><div class="pat" style="display:grid;gap:8px"><img src="assets/tc-bitgrid-hcai.svg" alt="Orange grid for Human-Centered AI"><img src="assets/tc-bitgrid-cse.svg" alt="Blue grid for Computer Science and Engineering"></div><div class="cap"><b>One study line</b><span>For that line's events. Shown: HCAI and CSE</span></div></figure>
+      </div>
+    </div>
+    <div class="cols3">
+      <div class="card"><h4>Do</h4><ul><li>Run it along an edge: the bottom of a post, the side of a banner</li><li>Keep it under a third of the layout</li><li>Animate it: cells lighting up one by one</li></ul></div>
+      <div class="card"><h4>Don't</h4><ul><li>Put body text on top of it</li><li>Change the cell shape or the levels</li><li>Mix one study line's colour into another line's content</li></ul></div>
+      <div class="card"><h4>Files</h4><p><code>06-pattern/</code> has every variant as SVG, a 2400 px wide strip and a full 1920 × 1080 background.</p></div>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section class="chapter" id="usage">
+    <div class="opener"><div class="n">07</div><div><h2>Using the brand</h2><p>How it comes together, and who looks after it.</p></div></div>
+    <div class="block"><span class="label">In use</span>
+      <div class="cols2">
+        <figure><img src="assets/tc-banner-facebook-cover-1640x624.png" alt="Facebook cover" style="border-radius:12px"><div class="cap"><b>Facebook cover</b><code>1640 × 624</code></div></figure>
+        <figure><img src="assets/tc-banner-discord-960x540.png" alt="Discord banner" style="border-radius:12px"><div class="cap"><b>Discord banner</b><code>960 × 540</code></div></figure>
+        <figure><img src="assets/tc-banner-linkedin-company-1128x191.png" alt="LinkedIn company cover" style="border-radius:12px"><div class="cap"><b>LinkedIn company cover</b><code>1128 × 191</code></div></figure>
+        <figure><img src="assets/tc-banner-linkedin-personal-1584x396.png" alt="LinkedIn banner for council members" style="border-radius:12px"><div class="cap"><b>LinkedIn banner for members</b><code>1584 × 396</code></div></figure>
+      </div>
+    </div>
+    <div class="cols3">
+      <div class="card"><h4>Study-line content</h4><p>An event for one study line uses that line's colour: in the duotone photo, the bit grid and small accents. The logo itself never changes.</p></div>
+      <div class="card"><h4>Council-wide content</h4><p>Navy, white and all four colours together, through the four-band bit grid or the logo. Duotones go navy to lilac.</p></div>
+      <div class="card"><h4>With DTU and partners</h4><p>Next to the DTU logo or a company logo, use the horizontal lockup at the same height as their logo, with clear space between. Never merge logos.</p></div>
+      <div class="card"><h4>Social posts</h4><p>Start from the backgrounds in <code>05-social/background</code>: navy, logo in the corner, bit grid at the bottom. Headline in Poppins Bold, date in JetBrains Mono.</p></div>
+      <div class="card"><h4>Files and naming</h4><p>Always take files from the brand kit, never from a screenshot or an old post. Name new files <code>tc-[what]-[variant]-[size]</code>.</p></div>
+      <div class="card"><h4>Who looks after it</h4><p>Marketing and Communications keeps the master files in the shared Drive and approves new templates. Ask in the council chat before making a new one.</p></div>
+    </div>
+  </section>
+
+  <!-- 08 -->
+  <section class="chapter" id="kit">
+    <div class="opener"><div class="n">08</div><div><h2>Brand kit</h2><p>Every file, where it lives and what size to use.</p></div></div>
+    <div class="tree" id="tree"></div>
+    <div class="block"><span class="label">Naming</span>
+      <p class="lead"><code>tc-[what]-[variant]-[background]-[size].png</code>. For example <code>tc-logo-color-transparent-1024.png</code>, <code>tc-lockup-horizontal-tagline-dark-2400w.png</code>, <code>tc-banner-linkedin-company-1128x191.png</code>. Sizes ending in <code>w</code> are widths, the height follows the artwork.</p></div>
+    <div class="block"><span class="label">Which file for what</span><div class="tbl"><table><thead><tr><th>Use</th><th>Pixels</th><th>File</th></tr></thead><tbody id="sizes"></tbody></table></div>
+      <p class="lead" style="font-size:14px">Platform sizes change from time to time. Check the platform's help page before uploading a new banner. For anything printed, use the SVG or a PDF, not PNG.</p></div>
+  </section>
+
+  <footer>Turing Council brand book · v1.0 · November 2026 · Marketing and Communications</footer>
+</div>
+
+<script>
+const P={mmc:"M87.413,25.179C88.655,25.891 89.422,27.212 89.425,28.643C89.427,30.075 88.665,31.399 87.425,32.114C83.063,34.633 77.371,37.919 74.046,39.838C72.345,40.821 70.248,40.821 68.546,39.838C65.33,37.982 59.912,34.853 55.704,32.424C54.464,31.708 53.701,30.384 53.704,28.952C53.707,27.52 54.475,26.199 55.717,25.488C61.441,22.213 69.168,17.792 69.168,17.792C70.834,16.848 72.875,16.853 74.537,17.805C74.537,17.805 81.878,22.009 87.413,25.179Z",
+as:"M91.714,30.793C93.41,29.814 95.498,29.81 97.197,30.783C101.932,33.495 111.132,38.764 111.132,38.764C113.855,40.324 113.861,44.249 111.142,45.817C111.142,45.817 102.365,50.877 97.759,53.532C96.058,54.513 93.963,54.513 92.262,53.531C88.819,51.543 82.822,48.08 78.296,45.468C77.059,44.753 76.296,43.432 76.296,42.003C76.296,40.574 77.059,39.254 78.296,38.539C82.667,36.016 88.384,32.715 91.714,30.793Z",
+cse:"M88.005,52.228C89.243,52.942 90.006,54.263 90.005,55.693C90.005,57.122 89.242,58.443 88.003,59.157C82.073,62.576 73.887,67.295 73.887,67.295C72.63,68.02 71.082,68.02 69.824,67.295C69.824,67.295 61.255,62.355 55.149,58.834C53.91,58.12 53.147,56.8 53.146,55.37C53.146,53.941 53.908,52.62 55.146,51.905C59.511,49.385 65.216,46.091 68.546,44.168C70.248,43.186 72.345,43.186 74.046,44.168C77.489,46.156 83.481,49.616 88.005,52.228Z",
+hcai:"M50.889,53.208C49.189,54.19 47.094,54.19 45.392,53.21C40.914,50.628 32.536,45.797 32.536,45.797C29.824,44.234 29.82,40.323 32.529,38.754C32.529,38.754 41.321,33.724 45.928,31.088C47.627,30.116 49.714,30.12 51.409,31.099C54.632,32.959 60.078,36.104 64.296,38.539C65.534,39.254 66.296,40.574 66.296,42.003C66.296,43.432 65.534,44.753 64.296,45.468C59.93,47.988 54.221,51.285 50.889,53.208Z",
+c:"M72.534,117.657C72.534,120.794 75.936,122.751 78.647,121.172L116.604,99.078C117.439,98.592 117.952,97.699 117.952,96.734L117.952,79.535C117.952,78.513 116.863,77.858 115.96,78.338L99.773,86.947C98.445,87.653 97.615,89.034 97.615,90.538L97.615,92.197C97.615,93.155 97.11,94.041 96.287,94.53C94.479,95.601 92.192,94.299 92.192,92.197L92.192,73.618C92.192,72.608 92.754,71.681 93.649,71.214C95.455,70.272 97.615,71.582 97.615,73.618L97.615,78.206C97.615,80.248 99.786,81.557 101.592,80.604L115.782,73.119C117.117,72.415 117.952,71.03 117.952,69.521L117.952,52.577C117.952,49.446 114.563,47.489 111.851,49.054L74.567,70.578C73.309,71.305 72.534,72.647 72.534,74.101L72.534,117.657Z",
+t:"M24.404,52.463C24.404,49.332 27.793,47.375 30.505,48.941L66.433,69.684C68.53,70.895 69.822,73.132 69.822,75.554L69.822,92.241C69.822,94.328 67.562,95.633 65.755,94.589L56.942,89.501C56.038,88.98 54.909,89.632 54.909,90.675L54.909,110.971C54.909,113.058 52.649,114.363 50.841,113.319L38.484,106.185C36.806,105.216 35.772,103.425 35.772,101.488L35.772,78.844C35.772,77.876 35.255,76.981 34.417,76.496L27.115,72.281C25.438,71.312 24.404,69.522 24.404,67.584L24.404,52.463Z"};
+const COL={mmc:'#79238E',as:'#1FD082',cse:'#2F3EEA',hcai:'#FC7634'};
+function paths(mode,o={}){
+  if(mode.startsWith('mono-')){const ink=mode.slice(5);return `<g fill="${ink}">${['mmc','as','cse','hcai','c','t'].map(k=>`<path d="${P[k]}"/>`).join('')}</g>`}
+  const tiles=o.tiles||COL;let s=['mmc','as','cse','hcai'].map(k=>`<path d="${P[k]}" fill="${tiles[k]}"/>`).join('');
+  return s+`<path d="${P.c}" fill="${o.c||'#FFFFFF'}" fill-opacity="${o.c?1:.9}"/><path d="${P.t}" fill="${o.t||'#FFFFFF'}"/>`}
+function mark(mode,o){
+  if(mode==='tile'||mode==='app'){return `<svg viewBox="0 0 100 100" role="img" aria-label="Turing Council logo" style="width:100%;display:block"><rect width="100" height="100" rx="${mode==='tile'?22:0}" fill="#030F4F"/><g transform="translate(${(100-93.56/105.57*62)/2} 19) scale(${62/105.57}) translate(-24.4 -16.85)">${paths('color')}</g></svg>`}
+  return `<svg viewBox="22 14 98 111" role="img" aria-label="Turing Council logo" style="width:100%;display:block">${paths(mode,o)}</svg>`}
+document.querySelectorAll('[data-mark]').forEach(el=>el.innerHTML=mark(el.dataset.mark));
+
+const NAV=[['01','Brand foundation','foundation'],['02','Colour','colour'],['03','Logo','logo'],['04','Typography','type'],['05','Imagery and photo style','imagery'],['06','Graphic elements','graphics'],['07','Using the brand','usage'],['08','Brand kit','kit']];
+document.getElementById('toc').innerHTML=NAV.map(([n,t,id])=>`<a href="#${id}"><span>${n}</span><b>${t}</b></a>`).join('');
+
+const mix=(a,b,t)=>{const p=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)),x=p(a),y=p(b);return '#'+x.map((v,i)=>Math.round(v+(y[i]-v)*t).toString(16).padStart(2,'0')).join('').toUpperCase()};
+const LEV=h=>['#17225D',mix('#030F4F',h,.32),mix('#030F4F',h,.55),mix('#030F4F',h,.78),h];
+const LINES=[['hcai','Human-Centered AI','DTU Orange','#FC7634','252 118 52','1505 C'],['mmc','Mathematical Modelling and Computation','DTU Purple','#79238E','121 35 142','2587 C'],['as','Autonomous Systems','DTU Bright green','#1FD082','31 208 130','3385 C'],['cse','Computer Science and Engineering','DTU Blue','#2F3EEA','47 62 234','2728 C']];
+const ink=h=>['#1FD082','#FC7634'].includes(h)?'#030F4F':'#fff';
+document.getElementById('lines').innerHTML=LINES.map(([k,n,d,h,rgb,pms])=>`<div class="swatch"><div class="c" style="background:${h};color:${ink(h)}">${d}</div><div class="d"><code>${h}</code><span>RGB ${rgb} · Pantone ${pms}</span><span>${n}</span></div></div>`).join('');
+document.getElementById('navyramp').innerHTML=[['Navy 900','#02092F','Overlays, footers'],['Navy 700','#17225D','Cards on navy, empty bit cells'],['Navy 500','#2E386D','Lines, secondary text on white'],['Navy 100','#DCDDE6','Light panels in documents']].map(([n,h,u])=>`<div class="swatch"><div class="c" style="height:70px;background:${h};color:${h==='#DCDDE6'?'#030F4F':'#fff'};font-size:14px">${n}</div><div class="d"><code>${h}</code><span>${u}</span></div></div>`).join('');
+document.getElementById('levels').innerHTML='<span></span>'+['0 · empty','1','2','3','4 · full'].map(x=>`<span class="h">${x}</span>`).join('')+LINES.map(([k,n,d,h])=>`<span style="font-weight:600">${k.toUpperCase()}</span>`+LEV(h).map(c=>`<span class="cell" style="background:${c}" title="${c}"></span>`).join('')).join('');
+const L=h=>{const c=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);return .2126*c[0]+.7152*c[1]+.0722*c[2]};
+const CR=(a,b)=>{const[x,y]=[L(a),L(b)].sort((p,q)=>q-p);return (x+.05)/(y+.05)};
+const verdict=v=>`<span class="${v>=4.5?'ok':'no'}">${v.toFixed(1)}:1</span>`;
+document.getElementById('contrast').innerHTML=[['White','#FFFFFF'],['Lilac','#C3C6EC'],['DTU Orange','#FC7634'],['DTU Bright green','#1FD082'],['DTU Blue','#2F3EEA'],['DTU Purple','#79238E'],['DTU Navy blue','#030F4F']].map(([n,h])=>`<tr><td><span class="dot" style="background:${h}"></span>${n}</td><td class="num">${h==='#030F4F'?'–':verdict(CR(h,'#030F4F'))}</td><td class="num">${h==='#FFFFFF'?'–':verdict(CR(h,'#FFFFFF'))}</td></tr>`).join('');
+
+const DONTS=[
+ ['Recolour the tiles',`<svg viewBox="22 14 98 111" style="width:100%">${paths('color',{tiles:{mmc:'#E5484D',as:'#F5C842',cse:'#E5484D',hcai:'#F5C842'}})}</svg>`],
+ ['Rotate or stretch',`<div style="transform:rotate(-18deg) scaleX(1.35)">${mark('color')}</div>`],
+ ['Use the colour logo on white',`<div style="background:#fff;border-radius:10px;padding:10px">${mark('color')}</div>`,'#fff'],
+ ['Add effects',`<div style="filter:drop-shadow(6px 8px 0 #FC7634) drop-shadow(0 0 10px #1FD082)">${mark('color')}</div>`],
+ ['Put it on a busy photo',`<div>${mark('color')}</div>`,'linear-gradient(135deg,#FC7634,#1FD082 40%,#79238E 70%,#F5C842)'],
+ ['Change the letters',`<svg viewBox="22 14 98 111" style="width:100%">${paths('color',{t:'#FC7634',c:'#2F3EEA'})}</svg>`],
+ ['Use blue or purple for text on navy',`<div style="font-weight:700;font-size:20px;line-height:1.1;color:#2F3EEA;text-align:center">Career<br><span style="color:#79238E">Night</span></div>`],
+ ['Rebuild it with another font',`<div style="font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:44px;color:#fff;text-align:center">TC</div>`],
+];
+document.getElementById('donts').innerHTML=DONTS.map(([t,v,bg])=>`<figure><div class="tile dont" style="aspect-ratio:4/3;background:${bg||'#030F4F'}"><div style="width:40%">${v}</div></div><div class="cap"><b>${t}</b></div></figure>`).join('');
+
+document.getElementById('scale').innerHTML=[
+ ['Display','Poppins Bold','64 / 64','−3%','Turing Council',700,34,'-.03em'],
+ ['Headline 1','Poppins Bold','40 / 44','−2%','Career Night is back',700,28,'-.02em'],
+ ['Headline 2','Poppins SemiBold','28 / 34','−1%','Meet 20 companies',600,22,'-.01em'],
+ ['Body','Poppins Regular','16 / 26','0','We speak for every master\'s student at DTU Compute.',400,15,'0'],
+ ['Caption','Poppins Medium','13 / 18','0','Photo: Career Night 2025',500,13,'0'],
+ ['Label','JetBrains Mono Medium','12 / 16, uppercase','+10%','12 NOV · 18:00',500,12,'.1em','mono'],
+].map(([s,f,z,t,x,w,px,ls,m])=>`<tr><td><b style="font-weight:600">${s}</b></td><td>${f}</td><td class="num">${z}</td><td class="num">${t}</td><td class="s" style="font-family:${m?'var(--mono)':'var(--font)'};font-weight:${w};font-size:${px}px;letter-spacing:${ls}">${x}</td></tr>`).join('');
+
+// placeholder auditorium photo for the duotone examples
+const PHOTO=(()=>{const W=800,H=600,c=document.createElement('canvas');c.width=W;c.height=H;const g=c.getContext('2d');
+  let gr=g.createLinearGradient(0,0,0,H);gr.addColorStop(0,'#2A2F4F');gr.addColorStop(.45,'#5A4B5E');gr.addColorStop(1,'#1B1A24');g.fillStyle=gr;g.fillRect(0,0,W,H);
+  gr=g.createRadialGradient(W*.5,H*.28,10,W*.5,H*.28,W*.45);gr.addColorStop(0,'rgba(255,236,200,.95)');gr.addColorStop(.35,'rgba(255,200,150,.45)');gr.addColorStop(1,'rgba(255,200,150,0)');g.fillStyle=gr;g.fillRect(0,0,W,H);
+  g.fillStyle='rgba(250,250,255,.85)';g.fillRect(W*.33,H*.14,W*.34,H*.22);g.fillStyle='rgba(60,70,140,.55)';g.fillRect(W*.36,H*.17,W*.28,H*.16);
+  let seed=7;const r=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+  for(let i=0;i<40;i++){g.fillStyle=`rgba(255,${200+r()*55|0},${150+r()*80|0},${.08+r()*.18})`;g.beginPath();g.arc(r()*W,r()*H*.5,6+r()*26,0,7);g.fill()}
+  [[H*.58,24,'#3B3442'],[H*.7,31,'#2A2531'],[H*.84,42,'#1A1720'],[H*1.0,58,'#0F0D13']].forEach(([y,s,col])=>{g.fillStyle=col;for(let x=-s;x<W+s;x+=s*2.1+r()*s*.6){const hx=x+r()*s*.5,hy=y-s*1.1+r()*s*.3;g.beginPath();g.ellipse(hx,hy,s*.55,s*.68,0,0,7);g.fill();g.beginPath();g.ellipse(hx,y+s*.5,s*1.05,s*.95,0,Math.PI,0);g.fill();g.fillRect(hx-s*1.05,y+s*.5,s*2.1,H)}});
+  return c.toDataURL('image/jpeg',.88)})();
+document.getElementById('duos').innerHTML=[['#FC7634','HCAI meetup','Human-Centered AI · orange'],['#1FD082','AS lab visit','Autonomous Systems · green'],['#2F3EEA','CSE hack night','Computer Science and Engineering · blue'],['#C3C6EC','Council meeting','Whole council · lilac']].map(([c,t,s])=>`<figure><div class="ph duo" style="--c:${c}"><img src="${PHOTO}" alt="Placeholder auditorium photo in a navy and ${s.split('·')[1].trim()} duotone"><div class="t">${t}<small>${s}</small></div></div></figure>`).join('')
+ +'';
+document.getElementById('duos').insertAdjacentHTML('afterend','<p class="lead" style="font-size:13.5px">Photos are generated placeholders. Purple works the same way as the others.</p>');
+
+// bit grid anatomy
+(()=>{let s='';const lv=LEV('#1FD082');const cell=22,gap=5.5,x0=24,y0=22;
+  for(let i=0;i<5;i++)s+=`<rect x="${x0+i*(cell+gap)}" y="${y0}" width="${cell}" height="${cell}" rx="4.4" fill="${lv[i]}"/><text x="${x0+i*(cell+gap)+cell/2}" y="${y0+cell+14}" fill="#C3C6EC" font-family="JetBrains Mono" font-size="9" text-anchor="middle">${i}</text>`;
+  s+=`<text x="24" y="92" fill="#fff" font-family="Poppins" font-weight="600" font-size="11">cell 1 · gap 0.25 · radius 0.2</text>`;
+  s+=`<rect x="24" y="104" width="${cell}" height="${cell}" rx="4.4" fill="${lv[4]}"/><rect x="${24+cell+gap}" y="104" width="${cell}" height="${cell}" rx="4.4" fill="${lv[2]}"/><line x1="${24+cell}" y1="134" x2="${24+cell+gap}" y2="134" stroke="#FC7634" stroke-width="1.5"/><text x="${24+cell*2+gap+8}" y="119" fill="#C3C6EC" font-family="JetBrains Mono" font-size="9">gap = cell ÷ 4</text>`;
+  document.getElementById('anat').innerHTML=s})();
+
+// kit
+document.getElementById('tree').innerHTML=`<b>final/</b>
+├─ <b>01-logo/</b>        <i>cube only · svg + png 512 / 1024 / 2048</i>
+│   ├─ svg/  tc-logo-color · mono-white · mono-black · mono-navy · color-navy
+│   └─ png/  transparent and navy versions
+├─ <b>02-lockup/</b>      <i>horizontal · stacked · with tagline × dark · light · mono</i>
+│   ├─ svg/  text converted to outlines
+│   └─ png/  1200w and 2400w
+├─ <b>03-app-icon/</b>    <i>navy square and rounded · 1024 · 512</i>
+├─ <b>04-web/</b>         <i>favicon.ico · favicon.svg · apple-touch-icon · icon-192/512 · email signature</i>
+├─ <b>05-social/</b>
+│   ├─ profile/    Instagram 1080 · LinkedIn 400 · Facebook 720 · Discord 512
+│   ├─ banner/     LinkedIn company and personal · Facebook cover · Discord
+│   └─ background/ post · portrait post · story · slide
+├─ <b>06-pattern/</b>     <i>bit grid: bands · mixed · one per study line · hidden TURING</i>
+├─ <b>07-colour/</b>      <i>tc-colours.ase (Affinity, Adobe) · .css · .json · swatch sheet</i>
+├─ <b>08-type/</b>        <i>font links and the type scale</i>
+└─ <b>brand-book/</b>     <i>this book as PDF</i>`;
+document.getElementById('sizes').innerHTML=[
+ ['Logo for documents and slides','512 / 1024 / 2048 square','01-logo/png/tc-logo-color-transparent-*'],
+ ['Logo on light or unknown backgrounds','1024 square','01-logo/png/tc-logo-color-navy-1024'],
+ ['Instagram profile picture','1080 × 1080','05-social/profile/tc-profile-instagram-1080'],
+ ['LinkedIn page logo','400 × 400','05-social/profile/tc-profile-linkedin-400'],
+ ['Facebook profile picture','720 × 720','05-social/profile/tc-profile-facebook-720'],
+ ['Discord server icon','512 × 512','05-social/profile/tc-profile-discord-512'],
+ ['LinkedIn company cover','1128 × 191','05-social/banner/tc-banner-linkedin-company-1128x191'],
+ ['LinkedIn banner for members','1584 × 396','05-social/banner/tc-banner-linkedin-personal-1584x396'],
+ ['Facebook cover','1640 × 624','05-social/banner/tc-banner-facebook-cover-1640x624'],
+ ['Discord banner','960 × 540','05-social/banner/tc-banner-discord-960x540'],
+ ['Instagram post / portrait / story','1080 × 1080 / 1350 / 1920','05-social/background/tc-bg-*'],
+ ['Slides and screens','1920 × 1080','05-social/background/tc-bg-slide-1920x1080'],
+ ['Browser tab','16 / 32 / 48','04-web/favicon.ico'],
+ ['iPhone home screen and web app','180 / 192 / 512','04-web/apple-touch-icon, icon-192, icon-512'],
+ ['Email signature','300 px wide','04-web/tc-email-signature-300w'],
+ ['Print: posters, stickers, merch','vector','SVG files, or PDF'],
+].map(([u,p,f])=>`<tr><td>${u}</td><td class="num">${p}</td><td><code>${f}</code></td></tr>`).join('');
+</script>
